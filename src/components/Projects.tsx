@@ -66,6 +66,7 @@ export function Projects() {
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
                 <div className="absolute top-3 left-3 z-20 bg-background/90 backdrop-blur-sm border border-border px-2 py-0.5 font-mono text-[11px] text-muted-foreground rounded-sm">

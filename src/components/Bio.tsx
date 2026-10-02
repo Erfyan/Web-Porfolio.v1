@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { personalInfo } from "../data/portfolioData"
+import profileImg from "../assets/profile.jpeg"
 
 export function Bio() {
   return (
@@ -23,9 +24,10 @@ export function Bio() {
 
             <div className="w-full h-full overflow-hidden relative">
               <img
-                src="/profile.jpeg"
+                src={profileImg}
                 alt={`${personalInfo.name} Portrait`}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover grayscale contrast-105 group-hover:contrast-100 group-hover:scale-105 transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
