@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-card: var(--card);
+  --color-primary: var(--foreground);
+  --color-muted: var(--muted-foreground);
+  --color-border: var(--border);
+
+  --color-accent-orange: #F97316;
+  --color-accent-green: #10B981;
+  --color-accent-amber: #F59E0B;
+  --color-accent-sage: #84CC16;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+}
+
+@layer base {
+  /* Default: Dark Serene "Hitam Adem" Theme */
+  :root,
+  .dark {
+    --background: #080A09;
+    --foreground: #F1F5F3;
+    --surface: #0E1310;
+    --surface-hover: #151C17;
+    --card: #111713;
+    --card-foreground: #F1F5F3;
+    --primary: #F1F5F3;
+    --primary-foreground: #080A09;
+    --secondary: #161D19;
+    --secondary-foreground: #F1F5F3;
+    --muted: #161D19;
+    --muted-foreground: #8B9A90;
+    --border: #1E2822;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --ring: #10B981;
+
+    --grid-line: rgba(255, 255, 255, 0.045);
+    --grid-line-glow: rgba(16, 185, 129, 0.25);
+    --glow-primary: rgba(16, 185, 129, 0.15);
+    --glow-secondary: rgba(249, 115, 22, 0.08);
+
+    --dock-bg: rgba(8, 10, 9, 0.7);
+    --code-bg: #0C100D;
+    --cursor-ring: rgba(249, 115, 22, 0.5);
+  }
+
+  /* Light Serene "Putih Adem" Theme */
+  :root[data-theme="light"],
+  .light {
+    --background: #F7FAF8;
+    --foreground: #101813;
+    --surface: #FFFFFF;
+    --surface-hover: #F0F5F2;
+    --card: #FFFFFF;
+    --card-foreground: #101813;
+    --primary: #101813;
+    --primary-foreground: #FFFFFF;
+    --secondary: #EBF2ED;
+    --secondary-foreground: #101813;
+    --muted: #EBF2ED;
+    --muted-foreground: #5A6D61;
+    --border: #E0E8E3;
+    --border-subtle: rgba(16, 24, 19, 0.08);
+    --ring: #059669;
+
+    --grid-line: rgba(16, 24, 19, 0.055);
+    --grid-line-glow: rgba(16, 185, 129, 0.3);
+    --glow-primary: rgba(16, 185, 129, 0.10);
+    --glow-secondary: rgba(249, 115, 22, 0.05);
+
+    --dock-bg: rgba(255, 255, 255, 0.85);
+    --code-bg: #F0F5F2;
+    --cursor-ring: rgba(16, 185, 129, 0.6);
+  }
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button, [role="button"], input, select, textarea {
+    cursor: none;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom refined minimalist scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}
+
+/* Orange to Green Calming Gradient Utilities */
+.gradient-orange-green-text {
+  background: linear-gradient(135deg, #F97316 0%, #F59E0B 45%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-orange-green-bg {
+  background: linear-gradient(135deg, #F97316 0%, #10B981 100%);
+}
+
+
+/* Small square grid lines pattern */
+.grid-lines-pattern {
+  background-size: 28px 28px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+/* Illuminated small square grid lines (lit up by cursor spotlight) */
+.grid-lines-pattern-bright {
+  background-size: 28px 28px;
+  background-image:
+    linear-gradient(to right, var(--grid-line-glow) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-glow) 1px, transparent 1px);
+}
+
+/* From Uiverse.io by gharsh11032000 */
+/* The switch - the box around the slider */
+.theme-switch {
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.theme-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.35em;
+  width: 1.35em;
+  left: 0.18em;
+  bottom: 0.18em;
+  background-color: #F97316;
+  border-radius: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.theme-switch input:checked + .theme-slider {
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.4), 0 0 6px rgba(249, 115, 22, 0.3);
+  border: 2px solid #10B981;
+  background-color: var(--surface-hover);
+}
+
+.theme-switch input:checked + .theme-slider:before {
+  transform: translateX(1.5em);
+  background-color: #10B981;
+}
+
+/* Section Nav Click Pulse Highlight Animation */
+@keyframes sectionPulse {
+  0% {
+    transform: scale(0.99);
+    filter: brightness(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+  35% {
+    transform: scale(1.008);
+    filter: brightness(1.15);
+    box-shadow: inset 0 0 40px rgba(16, 185, 129, 0.15), 0 0 30px rgba(249, 115, 22, 0.1);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.section-pulse-active {
+  animation: sectionPulse 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide navigation bar when modal pop-up is active */
+body.modal-open nav {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-100%) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
