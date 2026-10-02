@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
     role: "Full-Stack Developer & UI/UX Designer",
     year: "2026",
     tech: ["PHP", "Laravel", "React", "Tailwind CSS", "MySQL"],
-    image: "/projects/01.jpg",
+    image: "public/projects/01.jpg",
     githubUrl: "https://github.com/Erfyan/Stunt-Guard",
     liveUrl: "https://github.com/Erfyan/Stunt-Guard",
     stats: [
@@ -61,7 +61,7 @@ export const projectsData: Project[] = [
     role: "Full-Stack Developer & UI/UX Designer",
     year: "2026",
     tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "JavaScript"],
-    image: "/projects/02.jpg",
+    image: "public/projects/02.jpg",
     githubUrl: "https://github.com/Erfyan/SIPROS",
     liveUrl: "https://github.com/Erfyan/SIPROS",
     stats: [
@@ -79,7 +79,7 @@ export const projectsData: Project[] = [
     role: "Android Developer & UI/UX Designer",
     year: "2026",
     tech: ["Android", "Kotlin / Java", "REST API", "Figma", "MySQL"],
-    image: "/projects/03.jpg",
+    image: "public/projects/03.jpg",
     githubUrl: "https://github.com/Erfyan/Surat-APP",
     liveUrl: "https://github.com/Erfyan/Surat-APP",
     stats: [
@@ -97,7 +97,7 @@ export const projectsData: Project[] = [
     role: "Full-Stack Developer & UI/UX Designer",
     year: "2026",
     tech: ["PHP", "Laravel", "MySQL", "Tailwind CSS", "JavaScript"],
-    image: "/projects/04.jpg",
+    image: "public/projects/04.jpg",
     githubUrl: "https://github.com/Erfyan/BUMDes",
     liveUrl: "https://bumdescoppoawi.site",
     stats: [
@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     role: "Frontend Developer & UI/UX Designer",
     year: "2026",
     tech: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Bootstrap"],
-    image: "/projects/05.jpg",
+    image: "public/projects/05.jpg",
     githubUrl: "https://github.com/Erfyan/website-undangan-pernikahan",
     liveUrl: "https://github.com/Erfyan/website-undangan-pernikahan",
     stats: [
@@ -133,7 +133,7 @@ export const projectsData: Project[] = [
     role: "Frontend Developer & UI/UX Designer",
     year: "2025",
     tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "/projects/06.jpg",
+    image: "public/projects/06.jpg",
     githubUrl: "https://github.com/Erfyan/Unipolfest-LandingPage",
     liveUrl: "https://unipolfest.free.nf",
     stats: [
@@ -151,7 +151,7 @@ export const projectsData: Project[] = [
     role: "Full-Stack Developer & GIS Engineer",
     year: "2024 — 2025",
     tech: ["PHP", "Laravel", "MySQL", "Leaflet.js", "Bootstrap"],
-    image: "/projects/07.jpg",
+    image: "public/projects/07.jpg",
     githubUrl: "https://github.com/Erfyan/sig-kualair",
     liveUrl: "https://github.com/Erfyan/sig-kualair",
     stats: [
@@ -169,7 +169,7 @@ export const projectsData: Project[] = [
     role: "Full-Stack Developer",
     year: "2024",
     tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "JavaScript"],
-    image: "/projects/08.jpg",
+    image: "public/projects/08.jpg",
     githubUrl: "https://github.com/Erfyan/Smartstock",
     liveUrl: "https://github.com/Erfyan/Smartstock",
     stats: [
@@ -187,7 +187,7 @@ export const projectsData: Project[] = [
     role: "Frontend Developer",
     year: "2024",
     tech: ["HTML", "CSS", "JavaScript"],
-    image: "/projects/09.jpg",
+    image: "public/projects/09.jpg",
     githubUrl: "https://github.com/Erfyan/mathmagic",
     liveUrl: "https://github.com/Erfyan/mathmagic",
     stats: [
