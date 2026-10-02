@@ -23,7 +23,7 @@ export function Bio() {
 
             <div className="w-full h-full overflow-hidden relative">
               <img
-                src="../public/profile.jpeg"
+                src="/profile.jpeg"
                 alt={`${personalInfo.name} Portrait`}
                 loading="lazy"
                 className="w-full h-full object-cover grayscale contrast-105 group-hover:contrast-100 group-hover:scale-105 transition-all duration-700 ease-out"
