@@ -19,11 +19,14 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
 
       {/* Uiverse Switch by gharsh11032000 */}
       <label
+        htmlFor="theme-toggle"
         className="theme-switch"
         aria-label="Toggle dark and light theme"
         title={isLight ? "Switch to Dark Mode" : "Switch to Light Mode"}
       >
         <input
+          id="theme-toggle"
+          name="theme-toggle"
           type="checkbox"
           checked={isLight}
           onChange={toggleTheme}

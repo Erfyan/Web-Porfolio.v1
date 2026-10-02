@@ -136,12 +136,15 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
+                  <label htmlFor="contact-name" className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
                     Nama Anda
                   </label>
                   <input
+                    id="contact-name"
+                    name="name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -151,12 +154,15 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
+                  <label htmlFor="contact-email" className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
                     Email Anda
                   </label>
                   <input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -167,10 +173,12 @@ export function Contact() {
                 </div>
               </div>
               <div>
-                <label className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
+                <label htmlFor="contact-message" className="block font-mono text-[11px] sm:text-xs text-muted-foreground mb-1.5">
                   Detail / Deskripsi Proyek
                 </label>
                 <textarea
+                  id="contact-message"
+                  name="message"
                   rows={3}
                   required
                   value={formData.message}
